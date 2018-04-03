@@ -1,28 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>This is the tiitle</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-		<meta name="author" content="">
-		{% load static %}
-<!-- Bootstrap style --> 
-    <link id="callCss" rel="stylesheet" href="{% static 'bazar/bootshop/bootstrap.min.css' %}" media="screen"/>
-    <link href="{% static 'bazar/css/base.css' %}" rel="stylesheet" media="screen"/>
-<!-- Bootstrap style responsive -->	
-	<link href="{% static 'bazar/css/bootstrap-responsive.min.css' %}" rel="stylesheet"/>
-	<link href="{% static 'bazar/css/font-awesome.css' %}" rel="stylesheet" type="text/css">
-<!-- fav and touch icons -->
-    <link rel="shortcut icon" href="{% static 'bazar/images/ico/favicon.ico' }">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'bazar/images/ico/apple-touch-icon-144-precomposed.png' %}">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'bazar/images/ico/apple-touch-icon-114-precomposed.png' %}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'bazar/images/ico/apple-touch-icon-72-precomposed.png' %}">
-    <link rel="apple-touch-icon-precomposed" href="{% static 'bazar/images/ico/apple-touch-icon-57-precomposed.png' %}">
-	<style type="text/css" id="enject"></style>
-  </head>
-<body>
-		<div id="header">
+﻿{% extends "basicPage.html" %}
+{% load static %}
+{% block header %}
 				<div class="container">
 						<div id="welcomeLine" class="row">
 								<div class="span6">Welcome!<strong> User</strong></div>
@@ -87,7 +65,7 @@
 						</div>
 						</div>
 				</div>
-		</div>
+{% endblock header %}
 <!-- Header End====================================================================== -->
 <div id="carouselBlk">
 	<div id="myCarousel" class="carousel slide">
@@ -153,8 +131,10 @@
 		<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 	  </div> 
 </div>
-<div id="mainBody">
-	<div class="container">
+
+{% block mainBody %}
+
+<div class="container">
 	<div class="row">
 <!-- Sidebar ================================================== -->
 	<div id="sidebar" class="span3">
@@ -476,9 +456,10 @@
 		</div>
 		</div>
 	</div>
-</div>
-<!-- Footer ================================================================== -->
-	<div  id="footerSection">
+{% endblock mainBody %}
+
+{% block footerSection %}
+
 	<div class="container">
 		<div class="row">
 			<div class="span3">
@@ -512,8 +493,6 @@
 				<a href="#"><img width="60" height="60" src="{% static 'bazar/images/youtube.png' %}" title="youtube" alt="youtube"/></a>
 			 </div> 
 		 </div>
-		<p class="pull-right">&copy; Bootshop</p>
-	</div><!-- Container End -->
-	</div>
-</body>
-</html>
+		<p class="pull-right">&copy; Odreria</p>
+		</div>
+	{% endblock footerSection %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>This is the tiitle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    {% load static %}
+	<meta name="author" content="">
+<!-- Bootstrap style --> 
+    <link id="callCss" rel="stylesheet" href="{% static 'bazar/bootshop/bootstrap.min.css' %}" media="screen"/>
+    <link href="{% static 'bazar/css/base.css' %}" rel="stylesheet" media="screen"/>
+<!-- Bootstrap style responsive -->	
+	<link href="{% static 'bazar/css/bootstrap-responsive.min.css' %}" rel="stylesheet"/>
+	<link href="{% static 'bazar/css/font-awesome.css' %}" rel="stylesheet" type="text/css">
+<!-- fav and touch icons -->
+    <link rel="shortcut icon" href="{% static 'bazar/images/ico/favicon.ico' }">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'bazar/images/ico/apple-touch-icon-144-precomposed.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'bazar/images/ico/apple-touch-icon-114-precomposed.png' %}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'bazar/images/ico/apple-touch-icon-72-precomposed.png' %}">
+    <link rel="apple-touch-icon-precomposed" href="{% static 'bazar/images/ico/apple-touch-icon-57-precomposed.png' %}">
+	<style type="text/css" id="enject"></style>
+  </head>
+<body>
+    <div id="header">
+        {% block header %}{% endblock %}
+    </div>
+    <div id="mainBody">
+        {% block mainBody %}{% endblock %}
+    </div>
+    <div id="footerSection">
+        {% block footerSection %}{% endblock %}
+    </div>
+</body>
+</html>
