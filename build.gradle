@@ -1,0 +1,23 @@
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+
+dependencies {
+    compile 'com.sparkjava:spark-core:2.3'
+    testCompile 'junit:junit:4.11'
+}
+
+task runApp(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "com.odreria.Main"
+    args 'Java Cali'
+}
+
+wrapper {
+    distributionUrl="https://services.gradle.org/distributions/gradle-4.5.1-all.zip"
+}
+
+apply plugin: 'eclipse'
